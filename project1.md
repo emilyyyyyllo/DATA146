@@ -6,21 +6,21 @@ A Python package is a collection that contains multiple related modules and subp
 
 A Python library refers to the Standard Library, which is a large collection of modules and packages. A library comes with Python and is installed along with it, making its modules available to any Python code. One is able to use the modules in the library without having to download them from anywhere else. 
 
-In order to install a package and make the library of functions accessible to your local workspace, you have to first install the packages using the command ‘pip install function_name’. 
+In order to install a package and make the library of functions accessible to your local workspace, you have to first install the packages using the command `pip install function_name`. 
 
 ```
 pip install pandas 
 pip install numpy
 ```
-Then you will have to import the packages using the command ‘import package_name.’ 
+Then you will have to import the packages using the command `import package_name`. 
 ```
 import pandas as pd 
 import numpy as np
 ```
 If you want to call the functions inside that package, you can simply do so by using the dot(.) operator. 
 ```
-input = np.array([‘cat’,’dog’,’fish’])
-new_dataframe = pd.DataFrame(input, index=[1,2,3,4,])
+input = np.array(['cat’,'dog','fish'])
+new_dataframe = pd.DataFrame(input, index=[1,2,3])
 ```
 It is more convenient for you to use an alias such as pd and np because it allows you to call functions from the imported package using the short name, rather than having to type out the full name of the packages each time you want to call a function from it. 
 
@@ -30,11 +30,11 @@ A data frame is a two-dimensional, tabular data structure with labeled rows and 
 
 ```
 import pandas as pd
-data  = pd.read_csv(‘gapminder.tsv’, sep = ‘\t’)
+data = pd.read_csv(‘gapminder.tsv’, sep = ‘\t’)
 ```
-We need to specify the argument for the `read_csv( )` function because we have to let it know which file to read and which type of file it is. First, we need to pass in the file. Then, it is important that when we are using the `read_csv( )` function we need to know the type of the file. If the file we are importing is a tab-separated file, a tsv, we have to add an additional argument following the file name. This is because by default the `read_csv( )` function assumes that the file is a comma-separated file. We need to use the `\t` specification to inform python that our file is tab-separated. 
+We need to specify the argument for the `read_csv( )` function because we have to let it know which file to read and which type of file it is. First, we need to pass in the file. Then, it is important that when we are using the `read_csv( )` function we need to know the type of the file. If the file we are importing is a tab-separated file, we have to add an additional argument following the file name. This is because by default the `read_csv( )` function assumes that the file is a comma-separated file. We need to use the `\t` specification to inform python that our file is tab-separated. 
 
-In order to describe the data frame we just created, we can use the `head()` ,`info()`,`describe()` functions. 
+In order to describe the data frame we just created, we can use the `head()` , `info()`, `describe()` functions. 
 
 ```
 data.head() 
@@ -58,7 +58,7 @@ The alternate terminology for describing rows and columns is observations and va
 gapminder = pd.read_csv(‘gapminder.tsv’, sep = \t)
 ```
 
-If we want to interrogate the year variable within the data frame, we can use the `unique()` function to check all the unique years in the data frame. The command for this would be `data[‘year’].unique()`. From the result we print out, we can see that the year variable does exhibit regular intervals of five years. If I were to add new outcomes to the raw data for updates, I would have to add the year of 2012 and 2017 according to the five year regular interval. 
+If we want to interrogate the year variable within the data frame, we can use the `unique()` function to check all the unique years in the data frame. The command for this would be `data['year'].unique()`. From the result we print out, we can see that the year variable does exhibit regular intervals of five years. If I were to add new outcomes to the raw data for updates, I would have to add the year of 2012 and 2017 according to the five year regular interval. 
 
 ```
 len(data['country'].unique())*2
