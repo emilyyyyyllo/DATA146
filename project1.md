@@ -91,7 +91,7 @@ gdp_growth = data[data["country"].isin(["Germany","France","Spain","Italy"])&dat
 
 If we want to look at the most significant total gross domestic product increase during the previous 5-year period, we can simply do so by adding the year of 2002 to the argument for gdp_europe and assigning it to a new object called gdp_growth. From the result, we can tell that Germany had the greatest increase in GDP from 2002 to 2007. 
 
-![gdp](https://github.com/emilyyyyyllo/DATA146/blob/main/gdp%20data%20frame.png)
+![gdp](gdp_data_frame.png)
 
 
 ### Question 6
