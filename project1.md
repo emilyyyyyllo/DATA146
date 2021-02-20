@@ -108,19 +108,19 @@ data.loc[(data['country'] == 'France') & (data['year'] == 2002)]
 data.loc[(data['country'] == 'France') | (data['country'] == 'Spain')]
 ```
 
-`^` is the exclusive XOR operator, which returns True when only one of the two operands is true. One pitfall with using the `^` operator is that you would not know if only one or both of the statements are true. For example, the ^ operator returns False when `(‘dog’==’dog’) ^ (‘cat’==’cat’)`. 
+`^` is the exclusive XOR operator, which returns True when only one of the two operands is true. One pitfall with using the `^` operator is that you would not know if only one or both of the statements are true. For example, the ^ operator returns False when `('dog'=='dog') ^ ('cat'=='cat')`. 
 
 The `==` logical operator is one of the comparison operators which is used to compare values. It returns True or False in response to the condition given. The `==` operator is checking if the two operands are equal to each other. The `==` operator can be used to compare numbers, strings, or functions. The `==` operator is most commonly used in Boolean statements which return True or False. The function of a single `=` sign is different from a double `==` sign because the former is an assignment operation. Below is an example of how to use the `==` operator. 
 
 ```
-x= ‘cat’
-y= ‘dog’
+x= 'cat'
+y= 'dog'
 x==y, returns False 
 ```
 
 ### Question 7 
 
-`.loc` is used in data frames and is used to access rows by labels or a boolean array. `.loc` takes index labels and returns a series or a data frame if the index label exists in the caller data frame. It returns a data frame or a series depending on the parameters. If you pass in a list as the parameter, the data type of the returned value would be a data frame. If you simply pass in the index label, then the output would be of a series type. 
+`.loc` is used in data frames and is used to access observations by labels or a boolean array. `.loc` takes index labels and returns a series or a data frame if the index label exists in the caller data frame. It returns a data frame or a series depending on the parameters. If you pass in a list as the parameter, the data type of the returned value would be a data frame. If you simply pass in the index label, then the output would be of a series type. 
 
 The `.iloc` attribute for data frames is used for integer-location based indexing or selection by position, meaning to select data by numbers. There are two required arguments for `.iloc`— a row selector and a column selector. `.iloc` returns a series when one row is selected, and a data frame when multiple rows are selected. Usually, `.loc` is more widely used than `.iloc`. 
 
@@ -138,7 +138,7 @@ To extract a series of consecutive columns, you can also use the `.iloc` attribu
 
 ### Question 8
 
-API is short for “Application Programming Interface,” which is a set of rules that are shared by a particular service. These rules determine in which format or with which command set your application can access the service, as well as what data this service can return in the response. APIs are most commonly used to retrieve data. It acts as a layer between your application and external service. 
+API is short for “Application Programming Interface,” which is a set of rules that is shared by a particular service. These rules determine in which format or with which command set your application can access the service, as well as what data this service can return in the response. APIs are most commonly used to retrieve data. It acts as a layer between your application and external service. 
 
 To construct a request to a remote server in order to pull data, we have to first import the requests library and then assign the url for the desired data. 
 
@@ -169,34 +169,24 @@ After finishing the above steps, we are now able to retrieve the content from th
 r = requests.get(url)
 with open(file_name, 'wb') as f:
     f.write(r.content)
+
+import pandas as pd
+df = pd.read_csv(file_name)
 ```
 
 ### Question 9 
 
-The purpose of the `apply()` function from the pandas library is to apply a function along an axis of a data frame. It takes a function as an input and applies this function to an entire data frame. One thing to note is that you have to specify the axis that you want the function to act on (0 for columns; and 1 for rows). The `apply()` function can also be used with anonymous functions or lambda functions. Using the `apply()` function to various class objects is an alternative to writing loops which have to iterate over each column. apply() could be a preferred approach because it offers convenience. It accepts any user defined function that applies a transformation to a data frame or a series. Also, it can be applied both row-wise and column-wise. 
+The purpose of the `apply()` function from the pandas library is to apply a function along an axis of a data frame. It takes a function as an input and applies this function to an entire data frame. One thing to note is that you have to specify the axis that you want the function to act on (0 for columns; and 1 for rows). The `apply()` function can also be used with anonymous functions or lambda functions. Using the `apply()` function to various class objects is an alternative to writing loops which have to iterate over each column. `apply()` could be a preferred approach because it offers convenience. It accepts any user defined function that applies a transformation to a data frame or a series. Also, it can be applied both row-wise and column-wise. 
 
 
 ### Question 10 
 
-An alternative approach to filtering the number of columns in a data frame is to use the `.filter()` function to the data frame. The `filter()` function can subset the rows or columns according to the specified index labels. In order to subset the desired data and return a new data frame, you have to specify the labels of the columns. Another approach to achieve this is to use Boolean expressions. For example, we can filter the data frame based on the year's value of 2002. This conditional statement results in a boolean variable that has True when the value of year equals 2002. And then use the command `data[data['year']==2002]` and assign it to a new data frame. This will also successfully subset the data frame based on the year of 2002. 
+An alternative approach to filtering the number of columns in a data frame is to use the `.filter()` function to the data frame. The `filter()` function can subset the rows or columns according to the specified index labels. In order to subset the desired data and return a new data frame, you have to specify the labels of the columns. Another approach to achieve this is to use Boolean expressions. For example, we can filter the gapminder data frame based on the year's value of 2002. This conditional statement results in a boolean variable that has True when the value of year equals 2002. And then use the command `data[data['year']==2002]` and assign it to a new data frame. This will also successfully subset the data frame based on the year of 2002. 
 
 ```
 data.filter(items=['year','continent'])
 
 2002data = data[data['year']==2002]
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
