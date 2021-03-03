@@ -18,9 +18,13 @@ In order to generate a data set of 1000 observations, we can use the command `np
 
 When the beta is larger than the alpha, the mean of the beta distribution will be greater than the median. Below we can see a right-skewed distribution with alpha=2 and beta=6. The mean is 0.2556567993697229 and the median is 0.23877827678745545. 
 
+Right Skewed:
+
 ![rightskewed](right_skewed.png)
 
 When the beta is smaller than the alpha, the mean of the beta distribution will be smaller than the median, which shows a left-skewed distribution. In this case, I set alpha=6 and beta=2, which produces a mean of 0.7500593503731386 and a median of 0.7694370145250353. 
+
+Left Skewed:
 
 ![leftskewed](left_skewed.png)
 
