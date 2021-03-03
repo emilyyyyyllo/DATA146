@@ -25,6 +25,36 @@ When the beta is smaller than the alpha, the mean of the beta distribution will 
 ![leftskewed](left_skewed.png)
 
 
+### Question 3 
+
+From both of the histograms generated using the raw data and log transformation, we can clearly see that the majority of countries shift to the right, meaning the life expectancy for these countries increases from 1952 to 2007. It is obvious that the mean and the median for the year of 2007 are significantly higher than those of the year of 1952. By using the command `np.mean(df2007['lifeExp'])` and `np.median(df2007['lifeExp'])`, we can learn that the mean of life expectancy in 2007 is 67.00742253521126 and the median is 71.93549999999999, indicating that it is left-skewed. 
+
+Raw Data Plot:
+
+![life_exp](life_exp.png)
+
+Logarithmic Plot:
+
+![loglifeexp](log_life_exp.png)
+
+
+Both plots illustrate an obvious shift to the right, but I think the raw data one, with the ages shown on the x axis, is preferred for the fact that it reflects the growth of life expectancy more directly.  
+
+
+### Question 4 
+
+Raw Data Plot:
+
+![boxraw](box_raw.png)
+
+Logarithmic Plot:
+
+![boxlog](log_box.png)
+
+The log transformed box and whisker plot performs better at communicating the change in population amongst all of these countries from 1952 to 2007. In the raw data plot, we can clearly see that there are outliers increasing year by year, but the actual boxes are extremely squeezed at the bottom of the plot. This makes analyzing the change in population difficult because we are unable to spot an obvious difference between each year. The cause of such a case is that the outliers deviate significantly away from the mean and the median. On the other hand, the log transformed plot is able to show us the boxes clearly as well as the trend of growing population. 
+
+
+
 
 
 
