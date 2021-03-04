@@ -35,7 +35,7 @@ From both of the histograms generated using the raw data and log transformation,
 
 Raw Data Plot:
 
-![life_exp](life_exp.png)
+![life_exp](life_exp_1.png)
 
 Logarithmic Plot:
 
