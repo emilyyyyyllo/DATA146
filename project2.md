@@ -42,7 +42,7 @@ Logarithmic Plot:
 ![loglifeexp](log_life_exp.png)
 
 
-Both plots illustrate an obvious shift to the right, but I think the raw data one, with the ages shown on the x axis, is preferred for the fact that it reflects the growth of life expectancy more directly.  
+Both plots illustrate an obvious shift to the right, but I think the raw data one, with ages shown on the x-axis, is preferred for the fact that it reflects the growth of life expectancy more directly with the actual numerical value. The untransformed plot also performs better at presenting a visual comparison between the data for 1952 and 2007 than the logarithmic transformed plot. 
 
 
 ### Question 4
