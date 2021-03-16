@@ -130,6 +130,29 @@ After adding the dummy variables of zip codes, there is an obvious improvement f
 
 For the unstandardized linear regression model, the training score has now risen to 0.34 while the testing score is 0.24. We still see a little bit of overfitting since the training score is higher than the testing score, but in comparison with the previous models without considering zip codes, this is already a better fit model. 
 
+After standardization, the training score is still consistent with the previous model, which is 0.33. However, the testing score I originally got was extremely low—-3.303137384434876e+22. I figured this is because zip codes are dummy variables that take the value of either 0 or 1, which makes little sense to standardize. Even if standardized, I doubt if it would impact the model’s predictability. In order to generate a proper testing score, I later tried the following codes: 
+
+```
+lin_reg = LinearRegression()
+
+c_act = pd.read_csv('charleston_act.txt')
+c_act[['prices_scale']] = c_act[['prices']] / 100000# prices
+c_act[['sqft_scale']] = c_act[['sqft']]/1000 # prices
+X = c_act.drop(["prices_scale","prices","sqft"],axis = 1)
+y = c_act["prices_scale"]
+X.shape
+X = X.to_numpy()
+```
+What this does is to put square footage and housing prices on the same scale as the other features. By standardizing this way, I got a testing score of 0.25. 
+
+With ridge regression, the training score generates the same value of 0.33 and the testing score generates 0.28. 
+According to the scores produced by the three models using zip codes, the predictive power has now reached approximately 33%, which is a huge growth from the models that only utilize the data of beds, baths, and square feet. Therefore, it is plausible of us to say that location has a bigger impact over the housing price in Charleston than beds, baths, and space. 
+
+# Question 6 
+
+The model producing the best results is the ridge regression model that includes zip codes. And according to its internal and external validity, the ridge regression model is an overfit because the R squared for the training score 0.34 is higher than that of the testing score 0.28. However, despite not being an absolutely strong indicator itself, location (zip codes) is definitely a better predictor for the housing prices than beds, baths, and square footage. If I were working as a data scientist at Zillow, what I would recommend to refine the predictive model is to add additional features. For example, median income would definitely be a strong factor affecting the affordability of the buyers. Also, the number of schools, unemployment rate, number of hospitals are all significant indicators for housing prices. 
+
+
 
 
 
