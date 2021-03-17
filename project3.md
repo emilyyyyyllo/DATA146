@@ -53,11 +53,11 @@ for idxTrain, idxTest in kf.split(X):
  np.mean(test_scores)
  ```
 
-In terms of the number of splits for KFold, I assigned 10. This is because the total number of observations in the charleston_ask.cvs data is 715, so 10 would be a reasonable number. Each fold contains about 70 observations.
+In terms of the number of splits for KFold, I assigned 10, so each time there will be 9 training sets and 1 testing set for validation. The total number of observations in the charleston_ask.cvs data is 715, so 10 would be a reasonable number. Each fold contains about 70 observations. 
 
-Since a R squared value of 1 is the perfect score indicating that it explains 100% of the variability, we know that this linear regression model performs very poorly. The average training score is only 0.019 and the average testing score is around -0.03, which suggests that the relation between the three features—beds, baths, and square feet—and the target—the asking price—is extremely low. 
+Since a R squared value of 1 is the perfect score indicating that it explains 100% of the variability, we know that this linear regression model performs very poorly. The average training score is only 0.019 and the average testing score is around -0.03, which indicates poor predicative power. 
 
-The reason that the training and testing scores are so low might be that the three features are not put on a similar scale, which I will later fix by utilizing feature scaling. Despite the fact that beds and baths are on a similar scale(around 3 or 4), the square feet of the house are measured on an entirely different scale(more than 1000). However, the most likely reason for the model being underperforming might be that beds, baths, and sqaure footage are just not the most significant predictors for the asking prices of houses in Charleston. 
+The reason that the training and testing scores are so low might be that the three features are not put on a similar scale, which I will later fix by utilizing feature scaling. Despite the fact that beds and baths are on a similar scale(around 3 or 4), the square feet of the houses are measured on an entirely different scale(more than 1000), which affects the predictability of the model. Also, another possible reason for the model being underperforming might be that beds, baths, and sqaure footage are just not the most significant predictors for the asking prices of houses in Charleston. Finally, ridge regression might a better way to produce a predicative model rather than linear regression, so we will try these different specifications and types below. 
 
 
 # Question 2 
@@ -121,16 +121,17 @@ After trying to improve the model with standardization, I then applied a ridge r
 
 # Question 4 
 
-By using the actual Charleston housing prices data, the linear regression model before standardization, again, performs poorly. The training score is about 0.004 and the testing score is somewhere around -0.04. With standardization, the training score is still 0.004 and the testing score is -0.02. Finally, by running the ridge regression, the training score I got is again 0.004 and the testing score is -0.009. Overall, the three models all perform unsuccessfully. 
+For these three models, the number of folds I assigned for KFold is still 10 because there are approximately 650 observations in the charleston_act.csv dataset. 
+By using the actual Charleston housing prices data, the linear regression model before standardization, again, performs poorly. On average, the training score is 0.004 and the testing score is -0.04. With standardization, the training score is still 0.004 and the testing score is -0.02. Finally, by running the ridge regression, the training score I got is again 0.004 and the testing score is -0.009. Overall, these three models all perform poorly since they all generate low training and testing scores. 
 
 
 # Question 5 
 
 After adding the dummy variables of zip codes, there is an obvious improvement for the models. For all three models of the charleston_act.cvs data that include zip codes, I still assigned 10 for the number of folds in order to keep it consistent with the previous models. 
 
-For the unstandardized linear regression model, the training score has now risen to 0.33 while the testing score is 0.24. We still see a little bit of overfitting since the training score is higher than the testing score, but in comparison with the previous models without considering zip codes, this is already a better fit model. 
+For the unstandardized linear regression model, the training score has now risen to 0.339 while the testing score is 0.24. We still see a little bit of overfitting since the training score is higher than the testing score, but in comparison with the previous models without considering zip codes, this is already a better fit model. 
 
-After standardization, the training score is still consistent with the previous model, which is 0.33. However, the testing score I originally got was extremely low—-3.303137384434876e+22. I figured this is because zip codes are dummy variables that take the value of either 0 or 1, which makes little sense to standardize. Even if standardized, I doubt if it would negatively impact the model’s predictability. In order to generate a proper testing score, I later tried the following codes which scale the price and square feet variables: 
+After standardization, the training score is still consistent with the previous model, which is 0.339. However, the testing score I originally got was extremely low—-3.303137384434876e+22. I figured this is because zip codes are coded as binary variables that take the value of either 0 or 1, which makes little sense to standardize. Even if standardized, I doubt if it would negatively impact the model’s predictability. In order to generate a proper testing score, I later tried the following codes which scale the price and square feet variables: 
 
 ```
 lin_reg = LinearRegression()
@@ -146,20 +147,11 @@ X = X.to_numpy()
 
 What this does is to put square footage and housing prices on the same scale as the other features. By standardizing this way, I got a testing score of 0.25. 
 
-With ridge regression, the training score generates the same value of 0.33 and the testing score generates 0.28. According to the scores produced by the three models using zip codes, the predictive power has now reached approximately 33%, which is a huge growth from the models that only utilize the features of beds, baths, and square feet. Therefore, it is plausible of us to say that location (zip codes) has a bigger impact over the housing price in Charleston than beds, baths, and space. 
+With ridge regression, the training score generates the same value of 0.33 and the testing score generates 0.28. According to the scores produced by the three models using zip codes, the predictive power has now reached approximately 33%, which is a huge growth from the models that only utilize the features of beds, baths, and square feet. Therefore, it is plausible of us to say that the geographical location (zip codes) has a bigger impact over the housing price in Charleston than beds, baths, and space. 
 
 # Question 6 
 
-The model producing the best results is the ridge regression model that includes zip codes. And according to its internal and external validity, the ridge regression model is an overfit because the R squared for the training score 0.34 is higher than that of the testing score 0.28. However, despite not being an absolutely strong indicator itself, location (zip codes) is definitely a better predictor for the housing prices than beds, baths, and square footage. If I were working as a data scientist at Zillow, what I would recommend to refine the predictive model is to add additional features. For example, median income would definitely be a strong factor affecting the affordability of the buyers, so we might want to include that. Also, the number of schools, unemployment rate, number of hospitals are all significant indicators for housing prices. 
-
-
-
-
-
-
-
-
-
+The model producing the best results is the ridge regression model that includes zip codes because it yields the highest average training and testing scores. And according to its internal and external validity, the ridge regression model is an overfit because the R squared value for the training score 0.34 is higher than that of the testing score 0.28. However, despite not being an absolutely strong indicator itself, location (zip codes) is definitely a better predictor for the housing prices in Charleston than beds, baths, and square footage. If I were working as a data scientist at Zillow, what I would recommend to refine the predictive model is to add additional features. For example, median income would definitely be a strong factor affecting the affordability of the buyers, so we might want to include that in our predicative model. Also, the number of schools, unemployment rate, number of hospitals in the neighborhoood are all significant predictors for housing prices. 
 
 
 
