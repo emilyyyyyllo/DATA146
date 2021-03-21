@@ -14,19 +14,19 @@ The type of race (nominal) one belongs to and the amount of income (continuous) 
 
 In order to generate a data set of 1000 observations, we can use the command `np.random.beta(a, b, size=n)` where `n=1000`. To use the beta distribution to produce a plot that has a mean approximating the 50th percentile, we need to set alpha=beta. In this case, I set alpha=beta=5, so we can see a clear symmetry in the plot. The mean is 0.5028037973206971 and the median is 0.5064511906342577, which are extremely close to each other. 
 
-![symmetry](symmetry.png)
+![symmetry](graph1_sym.png)
 
 When the beta is larger than the alpha, the mean of the beta distribution will be greater than the median. Below we can see a right-skewed distribution with alpha=2 and beta=6. The mean is 0.2556567993697229 and the median is 0.23877827678745545. 
 
 Right Skewed:
 
-![rightskewed](right_skewed.png)
+![rightskewed](graph2_right.png)
 
 When the beta is smaller than the alpha, the mean of the beta distribution will be smaller than the median, which shows a left-skewed distribution. In this case, I set alpha=6 and beta=2, which produces a mean of 0.7500593503731386 and a median of 0.7694370145250353. 
 
 Left Skewed:
 
-![leftskewed](left_skewed.png)
+![leftskewed](graph3_left.png)
 
 
 ### Question 3
@@ -35,11 +35,11 @@ From both of the histograms generated using the raw data and log transformation,
 
 Raw Data Plot:
 
-![life_exp](lifeexpectancy_graph.png)
+![life_exp](graph4_raw.png)
 
 Logarithmic Plot:
 
-![loglifeexp](lifeexpectancy_graph2.png)
+![loglifeexp](graph5_log.png)
 
 
 Both plots illustrate an obvious shift to the right, but I think the raw data one, with ages shown on the x-axis, is preferred for the fact that it reflects the growth of life expectancy more directly with the actual numerical value. The untransformed plot also performs better at presenting a visual comparison between the data for 1952 and 2007 than the logarithmic transformed plot. 
