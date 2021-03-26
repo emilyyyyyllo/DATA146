@@ -7,3 +7,5 @@
 [project_2](project2.md)
 
 [project_3](project3.md)
+
+[midterm](midterm.md)
