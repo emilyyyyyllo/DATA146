@@ -234,7 +234,7 @@ Instead of R squared, we now use MSE when using ridge regression. One thing to n
 
 ```
 idx = np.argmin(rid_te_mse)
-print(rid_a_range[idx], rid_tr[idx], rid_te[idx], rid_tr_mse[idx], rid_te_mse[idx],)
+print(rid_a_range[idx], rid_tr[idx], rid_te[idx], rid_tr_mse[idx], rid_te_mse[idx])
 ```
 
 The optimal value I obtained by using MSE is different from the one using R squared. The optimal value in this case is 26.1 while it is 25.8 when using R squared. 
@@ -246,7 +246,7 @@ To find the optimal value for Lasso regression using MSE, we also need to modify
 
 ```
 idx = np.argmin(las_te_mse)
-print(las_a_range[idx], las_tr[idx], las_te[idx], las_tr_mse[idx], las_te_mse[idx],)
+print(las_a_range[idx], las_tr[idx], las_te[idx], las_tr_mse[idx], las_te_mse[idx])
 ```
 
 The optimal values using MSE and R squared for Lasso regression are both 0.00186. 
