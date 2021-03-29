@@ -37,7 +37,7 @@ In order to find the most correlated variable to the target, we can run through 
 housing.corr()
 ```
 
-!(corr)[corr_dataframe.png]
+![corr](corr_dataframe.png)
 
 From the data frame above, we can tell that MedInc is the most correlated variable to the target because it has the highest score of approximately 0.688. 
 
