@@ -230,11 +230,29 @@ According to the results, Lasso regression once again produces the smallest corr
 
 ### Question 23 
 
-Instead of R squared, we now use MSE when using ridge regression. One thing to note is that the optimal value for MSE is the smallest, not the highest. Therefore, we use the command `idx = np.argmin(rid_te_mse)` instead of `np.argmax()` since we want to minimize the value. 
+Instead of R squared, we now use MSE when using ridge regression. One thing to note is that the optimal value for MSE is the smallest, not the biggest. Therefore, we use the command `idx = np.argmin(rid_te_mse)` instead of `np.argmax()` since we want to minimize the value. The rest of the codes is pretty much the same as what we did in question 19. 
 
 ```
-idx = np.argmin(rid_te_mse)
-print(rid_a_range[idx], rid_tr[idx], rid_te[idx], rid_tr_mse[idx], rid_te_mse[idx])
+a_range = np.linspace(20, 30, 101)
+
+k = 20
+
+avg_tr_score=[]
+avg_te_score=[]
+avg_tr_mse = []
+avg_te_mse = []
+
+for a in a_range:
+    rid_reg = Ridge(alpha=a)
+    train_scores,test_scores, train_mse, test_mse = DoKFold(rid_reg,X,y,k)
+    avg_tr_score.append(np.mean(train_scores))
+    avg_te_score.append(np.mean(test_scores))
+    avg_tr_mse.append(np.mean(train_mse))
+    avg_te_mse.append(np.mean(test_mse))
+
+idx = np.argmin(avg_te_mse)
+print(avg_tr_score[idx], avg_te_score[idx], avg_tr_mse[idx], avg_te_mse[idx])
+print('Optimal alpha value: ' + format(a_range[idx], '.3f'))
 ```
 
 The optimal value I obtained by using MSE is different from the one using R squared. The optimal value in this case is 26.1 while it is 25.8 when using R squared. 
@@ -245,8 +263,26 @@ The optimal value I obtained by using MSE is different from the one using R squa
 To find the optimal value for Lasso regression using MSE, we also need to modify the codes using `idx = np.argmin(las_te_mse)` since the smaller the MSE, the better. 
 
 ```
-idx = np.argmin(las_te_mse)
-print(las_a_range[idx], las_tr[idx], las_te[idx], las_tr_mse[idx], las_te_mse[idx])
+a_range = np.linspace(0.001, 0.003, 101)
+
+k = 20
+
+avg_tr_score=[]
+avg_te_score=[]
+avg_tr_mse = []
+avg_te_mse = []
+
+for a in a_range:
+    las_reg = Lasso(alpha=a)
+    train_scores,test_scores, train_mse, test_mse = DoKFold(las_reg,X,y,k)
+    avg_tr_score.append(np.mean(train_scores))
+    avg_te_score.append(np.mean(test_scores))
+    avg_tr_mse.append(np.mean(train_mse))
+    avg_te_mse.append(np.mean(test_mse))
+
+idx = np.argmin(avg_te_mse)
+print(avg_tr_score[idx], avg_te_score[idx], avg_tr_mse[idx], avg_te_mse[idx])
+print('Optimal alpha value: ' + format(a_range[idx], '.3f'))
 ```
 
 The optimal values using MSE and R squared for Lasso regression are both 0.00186. 
