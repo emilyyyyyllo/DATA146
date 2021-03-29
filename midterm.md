@@ -287,17 +287,9 @@ print('Optimal alpha value: ' + format(a_range[idx], '.3f'))
 
 The optimal values using MSE and R squared for Lasso regression are both 0.00186. 
 
+### Final Reflection 
 
-
-
-
-
-
-
-
-
-
-
+I got everything right for the midterm. I probably struggled most with how to implement MSE when doing regression, but later I figured out it was because I forgot to minimize MSE. Overall, the midterm was quite challenging for me. 
 
 
 
