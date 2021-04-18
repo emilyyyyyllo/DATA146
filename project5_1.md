@@ -62,11 +62,11 @@ From the results we produced above, we can tell that standardizing the features 
 
 ### Question 3 
 
-Using the ridge regression, I  set the range from 70 to 75 and the number of fold to 20. This produced an optimal alpha value of `70.78947368421052`, a training score of `0.7358355438535896`, and a testing score of `0.7351783600963877`. Compared with the scores produced by the linear regression model, the results produced by the ridge regression have seen a slight improvement, but the improvement only shows after the 4th decimal place. 
+Using the ridge regression, I  set the range from 70 to 75 and the number of folds to 20. This produced an optimal alpha value of `70.78947368421052`, a training score of `0.7358355438535896`, and a testing score of `0.7351783600963877`. Compared with the scores produced by the linear regression model, the results produced by the ridge regression have seen a slight improvement, but the improvement only shows after the 4th decimal place. 
 
 ### Question 4 
 
-Using the lasso regression, I set the range from 0 to 0.5 and the number of folds to 20 to keep it consistent with the other models. This produced an optimal alpha value of `0`, a training score of `0.7358355537426604`, and a testing score of `0.7351336602401048`. I was unsure at first if yielding a 0 as the optimal alpha value is normal. However, running for multiple times, I was still getting the same value of 0. Compared to the results produced by the linear regression model, we can also see an improvement, but it only appears after the 4th decimal place. 
+Using the lasso regression, I set the range from 0 to 0.5 and the number of folds to 20 to keep it consistent with the other models. This produced an optimal alpha value of `0`, a training score of `0.7358355537426604`, and a testing score of `0.7351336602401048`. I was unsure at first if yielding a 0 as the optimal alpha value is normal. However, running the model for multiple times, I was still getting the same value of 0. Compared to the results produced by the linear regression model, we can also see an improvement, but it only appears after the 4th decimal place. 
 
 ### Question 5 
 
