@@ -2,12 +2,12 @@
 
 [informal_practice1](gapminder.md)
 
-[project_1](project1.md)
+[project 1](project1.md)
 
-[project_2](project2.md)
+[project 2](project2.md)
 
-[project_3](project3.md)
+[project 3](project3.md)
 
 [midterm](midterm.md)
 
-[project_5](project5.md)
+[project 5.1](project5_1.md)
