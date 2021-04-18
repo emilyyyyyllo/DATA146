@@ -62,15 +62,15 @@ From the results we produced above, we can tell that standardizing the features 
 
 ### Question 3 
 
-Using the ridge regression, I  set the range from 70 to 75 and the number of fold to 20. This produced an optimal alpha value of 70.78947368421052, a training score of 0.7358355438535896, and a testing score of 0.7351783600963877. Compared with the scores produced by the linear regression model, the results produced by the ridge regression have seen a slight improvement, but the improvement only shows after the 4th decimal place. 
+Using the ridge regression, I  set the range from 70 to 75 and the number of fold to 20. This produced an optimal alpha value of `70.78947368421052`, a training score of `0.7358355438535896`, and a testing score of `0.7351783600963877`. Compared with the scores produced by the linear regression model, the results produced by the ridge regression have seen a slight improvement, but the improvement only shows after the 4th decimal place. 
 
 ### Question 4 
 
-Using the lasso regression, I set the range from 0 to 0.5 and the number of folds to 20 to keep it consistent with the other models. This produced an optimal alpha value of 0, a training score of 0.7358355537426604, and a testing score of 0.7351336602401048. I was unsure at first if yielding a 0 as the optimal alpha value is normal. However, running for multiple times, I was still getting the same value of 0. Compared to the results produced by the linear regression model, we can also see an improvement, but it only appears after the 4th decimal place. 
+Using the lasso regression, I set the range from 0 to 0.5 and the number of folds to 20 to keep it consistent with the other models. This produced an optimal alpha value of `0`, a training score of `0.7358355537426604`, and a testing score of `0.7351336602401048`. I was unsure at first if yielding a 0 as the optimal alpha value is normal. However, running for multiple times, I was still getting the same value of 0. Compared to the results produced by the linear regression model, we can also see an improvement, but it only appears after the 4th decimal place. 
 
 ### Question 5 
 
-With wealthI as the target, the linear regression model without standardization produced a MSE as high as 1750276834.930475 and a R squared value of 0.8258271939658526. And the coefficient for the model is: 
+With wealthI as the target, the linear regression model without standardization produced a MSE as high as `1750276834.930475` and a R squared value of `0.8258271939658526`. And the coefficient for the model is: 
 ```
 array([ 2.31986195e+03,  1.08192000e+03, -5.08892487e+01,  6.53283809e+03,
         3.17688859e+03,  4.03623951e+03, -9.96051610e+03,  1.12302854e+04,
@@ -89,7 +89,7 @@ array([ 2.31986195e+03,  1.08192000e+03, -5.08892487e+01,  6.53283809e+03,
        -6.81569745e+04, -2.53665673e+04, -2.24372689e+04,  2.24372689e+04])
 ```
 
-After standardizing the linear regression model, the values of MSE and R squared barely changed. The values of MSE and R squared are 1750288550.4740968 and 0.8258260281336447 respectively. The coefficient of the linear regression model with standardization is: 
+After standardizing the linear regression model, the values of MSE and R squared barely changed. The values of MSE and R squared are `1750288550.4740968` and `0.8258260281336447` respectively. The coefficient of the linear regression model with standardization is: 
 ```
 array([ 8.64993728e+03  5.31704713e+02 -1.00083919e+03  5.39975577e+03
   5.08584139e+15  5.97820436e+15  5.30846044e+15  5.46141040e+15
@@ -110,7 +110,7 @@ array([ 8.64993728e+03  5.31704713e+02 -1.00083919e+03  5.39975577e+03
 
 From the above models using linear regression, we can see that the R squared value has increased, but the problem is that we now have extremely huge MSE which is not a positive sign for model prediction. Also, while the values of MSE and R squared stay approximately the same, once again the coefficients changed significantly. 
 
-Running a ridge regression model, I set the range from 85 to 95 and the number of folds to 20. This produced an optimal alpha value is 88.15789473684211, a training score of 0.8258366475526164, and a testing score of 0.8253087200542343. 
+Running a ridge regression model, I set the range from 85 to 95 and the number of folds to 20. This produced an optimal alpha value is `88.15789473684211`, a training score of `0.8258366475526164`, and a testing score of `0.8253087200542343`. 
 
 Running a lasso regression model, I set the range from 
 
