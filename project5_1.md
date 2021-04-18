@@ -129,7 +129,8 @@ Below are the ridge and lasso regression models with `wealthI` as the target. Fr
 ![lasso](lasso_reg2.png)
 
 
-Here is the ridge regression model using `wealthC` as the target. 
+Here is the ridge regression model using `wealthC` as the target. The reason why I only included the ridge regression model for `wealthC` here is because it is the best performing model among the three models using `wealthC`.
+
 
 ![ridge](ridge_reg3.png)
 
