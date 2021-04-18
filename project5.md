@@ -120,10 +120,10 @@ Running a lasso regression model, I set the range from 0 to 0.5 and the number o
 Overall, there is much to take into consideration to identify the best model. In terms of R squared, all three kinds of models using `wealthI` have consistently higher values for training and testing scores than those for `wealthC`. This indicates that `wealthI` is a more correlated variable to the other variables in the data set than `wealthC`, making it more suitable for predicting the wealth level for all people in the West African country. I had a concern regarding using `wealthI` though since it generates extremely large MSE, but right now I would assume R squared should be of greater importance than MSE. Therefore, the model that produces the best results are the ridge and lasso regression models using `wealthI` since they generate the highest training and testing scores among all of the models for both `wealthC` and `wealthI`. Below are the ridge and lasso regression models with `wealthI` as the target. 
 
 
-![ridge](ridge_reg.png)
+![ridge](ridge_reg2.png)
 
 
-![lasso](lasso_reg.png)
+![lasso](lasso_reg2.png)
 
 
 
