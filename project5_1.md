@@ -129,6 +129,12 @@ Below are the ridge and lasso regression models with `wealthI` as the target. Fr
 ![lasso](lasso_reg2.png)
 
 
+Here is the ridge regression model using `wealthC` as the target. 
+
+![ridge](ridge_reg3.png)
+
+
+
 
 
 
