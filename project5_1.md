@@ -90,7 +90,7 @@ With wealthI as the target, the linear regression model without standardization 
 
 ```
 
-After standardizing the linear regression model, the values of MSE and R squared barely changed. The values of MSE and R squared are `1750288550.4740968` and `0.8258260281336447` respectively. The coefficient of the linear regression model with standardization is: 
+After standardizing the linear regression model, the values of MSE and R squared barely changed. The training and testing MSE are `1750255416.6526966` and `1754915063.1109443` respectively. And the training and testing R squared values are `0.8258286888539557` and `0.8251401373199106`. The coefficient of the linear regression model with standardization is: 
 ```
 [ 8.64993728e+03  5.31704713e+02 -1.00083919e+03  5.39975577e+03
   5.08584139e+15  5.97820436e+15  5.30846044e+15  5.46141040e+15
