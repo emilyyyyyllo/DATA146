@@ -62,7 +62,7 @@ From the results we produced above, we can tell that standardizing the features 
 
 ### Question 3 
 
-Using the ridge regression, I  set the range from 70 to 75 and the number of folds to 20. This produced an optimal alpha value of `70.78947368421052`, a training score of `0.7358355438535896`, and a testing score of `0.7351783600963877`. Compared with the scores produced by the linear regression model, the results produced by the ridge regression have seen a slight improvement, but the improvement only shows after the 4th decimal place. 
+Using the ridge regression, I  set the range from 70 to 75 and the number of folds to 20. This produced an optimal alpha value of `73.6842105263158`, a training score of `0.7358356156922558`, and a testing score of `0.7351887388305168`. Compared with the scores produced by the linear regression model, the results produced by the ridge regression have seen a slight improvement, but the improvement only shows after the 4th decimal place. 
 
 ### Question 4 
 
@@ -132,7 +132,7 @@ Below are the ridge and lasso regression models with `wealthI` as the target. Fr
 Here is the ridge regression model using `wealthC` as the target. The reason why I only included the ridge regression model for `wealthC` here is because it is the best performing model among the three models using `wealthC`.
 
 
-![ridge](ridge_reg3.png)
+![ridge](ridge_reg4.png)
 
 
 
