@@ -66,7 +66,7 @@ Using the ridge regression, I  set the range from 70 to 75 and the number of fol
 
 ### Question 4 
 
-Using the lasso regression, I set the range from 0 to 0.5 and the number of folds to 20 to keep it consistent with the other models. This produced an optimal alpha value of `0`, a training score of `0.7358355537426604`, and a testing score of `0.7351336602401048`. I was unsure at first if yielding a 0 as the optimal alpha value is normal. However, running the model for multiple times, I was still getting the same value of 0. Compared to the results produced by the linear regression model, we can also see an improvement, but it only appears after the 4th decimal place. 
+Using the lasso regression, I set the range from 0 to 0.5 and the number of folds to 20 to keep it consistent with the other models. This produced an optimal alpha value of `0`, a training score of `0.7358355537426604`, and a testing score of `0.7351336602401048`. I was unsure at first if yielding a 0 as the optimal alpha value is normal. However, running the model for multiple times, I was still getting the same value of 0. Compared to the results produced by the linear regression model, we can also see an improvement, but it only appears after the 4th decimal place. In comparison with the ridge regression model, both the training and testing scores produced by the lasso regression model have both declined a little bit, so for the target variable `wealthC`, the ridge regression model has the best performance. 
 
 ### Question 5 
 
