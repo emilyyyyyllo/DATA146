@@ -17,8 +17,8 @@ y = df.wealthC
 ```
 
 ### Question 2 
-Using linear regression, the MSE I produced without the standardization of features is `0.4428100784152544`.
-The R squared value is `0.7358226925730342`.
+Using linear regression without standardization, I produced a training MSE of `0.4428243604530385` and a testing MSE of `0.4437436624209024`.
+The training R squared value is `0.7358226925730342` and the testing value is `0.7351080478691341`.
 The coefficient the linear regression model without standardization is: 
 ```
 [ 3.01812923e-02,  1.07882853e-02, -5.57603897e-04,  8.37880684e-02,
