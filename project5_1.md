@@ -58,7 +58,7 @@ The coefficient of the standardized linear regression model is:
   2.39952072e+11  3.49669495e+10 -4.32651302e+10 -4.32651302e+10]
 ```
 
-From the results we produced above, we can tell that standardizing the features actually made coefficients drop significantly while the MSE and R squared values barely changed. 
+From the results we produced above, we can tell that standardizing the features actually made coefficients change quite a lot while the MSE and R squared values barely changed. 
 
 ### Question 3 
 
