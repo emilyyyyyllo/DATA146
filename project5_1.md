@@ -111,7 +111,7 @@ After standardizing the linear regression model, the values of MSE and R squared
 
 From the above models using linear regression, we can see that the R squared value has increased in comparison with that of using `wealthC`, but the problem is that we now have extremely huge MSE which is not a positive sign for model prediction. Also, while the coefficients changed significantly, the values of MSE and R squared stay approximately the same. 
 
-Running a ridge regression model, I set the range from 85 to 95 and the number of folds to 20. This produced an optimal alpha value of `88.15789473684211`, a training score of `0.8258366475526164`, and a testing score of `0.8253087200542343`. 
+Running a ridge regression model, I set the range from 85 to 95 and the number of folds to 20. This produced an optimal alpha value of `87.15789473684211`, a training score of `0.8258366475526164`, and a testing score of `0.8253087200542343`. 
 
 Running a lasso regression model, I set the range from 0 to 0.5 and the number of folds to 20. This produced an optimal alpha value of `0.3421052631578947`, a training score of `0.8258367743818826`, and a testing score of `0.825314711449513`. 
 
