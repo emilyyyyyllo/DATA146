@@ -11,3 +11,5 @@
 [midterm](midterm.md)
 
 [project 5.1](project5_1.md)
+
+[project 5.2](project5_2.md)
