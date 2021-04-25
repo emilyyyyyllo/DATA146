@@ -118,7 +118,7 @@ Here are the training and testing scores for the standardized data:
 [0.79296875, 0.4890190336749634]
 [0.79296875, 0.48560273304050755]
 ```
-The best result for the unstandardized data is produced with a 5000 estimator and the best result for standardized data is produced by a 1000 estimator. From the results of both the unstandardized and standardized data, there are huge gaps between the training and the testing scores with the former higher than the latter, suggesting an overfit. 
+The best result for the unstandardized data is produced with a 5000 estimator and the best result for standardized data is produced by a 1000 estimator. From the results of both the unstandardized and standardized data, there are huge gaps between the training and the testing scores with the former higher than the latter, suggesting an overfit. Also, I found out that the minimum samples required to split an internal node using a range of 20 to 30 is 22.
 
 ### Question 4 
 
@@ -155,7 +155,7 @@ To summarize the changes among all of the models after recoding 2 and 3 into a s
 
 ### Question 5 
 
-In general, the best model is the logistic regression model after recoding 2 and 3 into a single value because it yields the highest testing score of 0.5597852611029771. Thus, it is the most accurate predictor for wealth of all persons throughout the large West African capital city. To add on that, another advantage of the logistic regression model after recoding 2 and 3 into a single value is that it is not overfitting, so the results generated may be more reliable than other models. 
+In general, the best model is the logistic regression model after recoding 2 and 3 into a single value because it yields the highest testing score of 0.5597852611029771. On the other side, the random forest model without standardization is the least accurate model because the testing scores it produces are the lowest among all of the models and there are wide gaps between the training and testing scores, indicating an overfit. Thus, it is the most accurate predictor for wealth of all persons throughout the large West African capital city. To add on that, another advantage of the logistic regression model after recoding 2 and 3 into a single value is that it is not overfitting, so the results generated may be more reliable than other models. 
 
 
 
