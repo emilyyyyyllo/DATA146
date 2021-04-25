@@ -89,6 +89,9 @@ y = pns.wealthC
 
 Executing the K-nearsest neighbors classification, I used a narrower range of 70 to 75 and found out that with 74, it generates the highest testing score. The testing score I got is 0.5519765739385066. I also plotted the KNN model out to better visualize it. And from the graph, we can tell that at an alpha value of 74, the testing score is the closest to the training score, which indicates that it produces the least overfit within the range from 70 to 75. Also, at 74, the fraction correctly classified scores the highest. 
 
+![KNN](KNN_1.jpg)
+
+
 
 
 
