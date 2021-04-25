@@ -93,7 +93,7 @@ Executing the K-nearsest neighbors classification, I used a narrower range of 70
 
 We can also add a distance weight to see if it helps classify better. With the distance weight, the best alpha value is 70 and the testing score is 0.5017081503172279, which is lower than that of using no distance. 
 
-![KNN_distance](KNN_distance.png)
+![KNN_distance](KNN_distance1.png)
 
 
 
