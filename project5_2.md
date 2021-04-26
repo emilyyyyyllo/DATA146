@@ -118,7 +118,7 @@ Here are the training and testing scores for the standardized data:
 [0.79296875, 0.4890190336749634]
 [0.79296875, 0.48560273304050755]
 ```
-The best result for the unstandardized data is produced with a 5000 estimator and the best result for standardized data is produced by a 1000 estimator. From the results of both the unstandardized and standardized data, there are huge gaps between the training and the testing scores with the former higher than the latter, suggesting an overfit. Also, I found out that the minimum samples required to split an internal node using a range of 20 to 30 is 22.
+The best result for the unstandardized data is produced with a 5000 estimator and the best result for standardized data is produced by a 1000 estimator. From the results of both the unstandardized and standardized data, there are huge gaps between the training and the testing scores with the former higher than the latter, suggesting an overfit. Also, I found out that the minimum samples required to split an internal node using a range of 20 to 30 is 27 as it generates the best results.
 
 ### Question 4 
 
