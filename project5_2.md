@@ -126,11 +126,11 @@ After recoding the wealth classes 2 and 3 into a single outcome, I redid all of 
 
 First I ran the KNN model with and without the weighted distance. With the distance weight, at the optimal alpha value of 70, I got a testing score of 0.5348950707662274. 
 
-![KNN_recode](KNN_recode1.png)
+![KNN_recode](KNN_recode2.png)
 
 Next, I added the distance weight into the KNN model. At the optimal alpha value of 72, I got a testing score of 0.5207418252806247. Once again, accuracy dropped after adding the distance since we produced a lower testing score. 
 
-![KNN_recode](KNN_recode2.png)
+![KNN_recode](KNN_recode1.png)
 
 As for the logistic regression model, the training and testing scores are 0.5537109375 and 0.5597852611029771 respectively. In comparison with the scores produced by KNN with or without distance, the scores produced by the logistic regression model are higher, indicating a higher accuracy. 
 
